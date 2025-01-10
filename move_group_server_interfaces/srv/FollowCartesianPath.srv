@@ -1,0 +1,6 @@
+# Request
+geometry_msgs/Pose[] poses    # List of poses for the Cartesian planner to follow
+
+---
+# Response
+bool state   # Returns true if the Cartesian path was successfully executed

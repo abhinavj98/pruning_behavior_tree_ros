@@ -1,0 +1,2 @@
+pkill -f ros
+Export pythonpath to parent directory of pruning_sb3
