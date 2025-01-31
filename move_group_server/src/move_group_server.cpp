@@ -245,7 +245,7 @@ Eigen::MatrixXd make_jacobian(const std::shared_ptr<moveit::planning_interface::
           current_state->getLinkModel(joint_model_group->getLinkModelNames().back()),
             reference_point_position, jacobian);
  
-    RCLCPP_INFO_STREAM(LOGGER, "Current state: \n" <<jacobian << "\n");
+    // RCLCPP_INFO_STREAM(LOGGER, "Current state: \n" <<jacobian << "\n");
     return jacobian;
 }
 
@@ -254,7 +254,7 @@ void get_jacobian(const std::shared_ptr<move_group_server_interfaces::srv::GetJa
   const std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group,
   const moveit::core::JointModelGroup* joint_model_group)
 {
-  RCLCPP_INFO_STREAM(LOGGER, "Jacobian request received");
+  // RCLCPP_INFO_STREAM(LOGGER, "Jacobian request received");
   Eigen::MatrixXd jacobian = make_jacobian(move_group, joint_model_group);
 
   //convert the jacobian to a vector

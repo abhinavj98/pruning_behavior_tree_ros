@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur_with_pruner">
+
+  <!-- robot name parameter -->
+  <xacro:arg name="name" default="ur"/>
+  <!-- parameters -->
+  <xacro:arg name="prefix" default="" />
+
+  <xacro:include filename="$(find pruning_bt)/srdf/system_macro.srdf.xacro"/>
+
+  <xacro:ur_srdf name="$(arg name)" prefix="$(arg prefix)"/>
+
+</robot>
+
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<!-- <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur_with_pruner">
+    <xacro:arg name="tf_prefix" default=""/>
+    <xacro:arg name="name" default="ur"/>
+
+    <xacro:include filename="$(find pruning_bt)/srdf/system_macro.srdf.xacro"/>
+    <xacro:ur_with_pruner_srdf name="$(arg name)" tf_prefix="$(arg tf_prefix)"/>
+
+
+</robot> -->
+

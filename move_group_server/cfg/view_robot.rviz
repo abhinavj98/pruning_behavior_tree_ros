@@ -1,6 +1,6 @@
 Panels:
   - Class: rviz_common/Displays
-    Help Height: 83
+    Help Height: 70
     Name: Displays
     Property Tree Widget:
       Expanded:
@@ -8,16 +8,12 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /TF1
         - /TF1/Frames1
-      Splitter Ratio: 0.4957627058029175
-    Tree Height: 70
-  - Class: rviz_common/Selection
-    Name: Selection
-  - Class: rviz_common/Tool Properties
-    Expanded:
-      - /2D Goal Pose1
-      - /Publish Point1
-    Name: Tool Properties
-    Splitter Ratio: 0.5886790156364441
+        - /MarkerArray2
+        - /MarkerArray2/Topic1
+      Splitter Ratio: 0.5
+    Tree Height: 795
+  - Class: rviz_common/Help
+    Name: Help
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
@@ -67,8 +63,8 @@ Visualization Manager:
           Z: 2
       Name: MotionPlanning
       Planned Path:
-        Color Enabled: true
-        Interrupt Display: true
+        Color Enabled: false
+        Interrupt Display: false
         Links:
           All Links Enabled: true
           Expand Joint Details: false
@@ -88,10 +84,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          camera_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           dovetail_female_mount__base:
             Alpha: 1
             Show Axes: false
@@ -101,6 +93,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          dovetail_female_mount__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           dovetail_male_mount__base:
             Alpha: 1
             Show Axes: false
@@ -110,6 +106,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          dovetail_male_mount__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           flange:
             Alpha: 1
             Show Axes: false
@@ -123,11 +123,55 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          gripper_link:
+          mock_pruner__base:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
+          mock_pruner__camera0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__endpoint:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__mouth:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__mouth_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__tof0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__tof1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          rotation_correction_plate__base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          rotation_correction_plate__body:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          rotation_correction_plate__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -161,7 +205,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Loop Animation: false
+        Loop Animation: true
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -169,7 +213,7 @@ Visualization Manager:
         Show Trail: false
         State Display Time: 0.05 s
         Trail Step Size: 1
-        Trajectory Topic: /display_planned_path
+        Trajectory Topic: display_planned_path
         Use Sim Time: false
       Planning Metrics:
         Payload: 1
@@ -193,7 +237,7 @@ Visualization Manager:
       Planning Scene Topic: monitored_planning_scene
       Robot Description: robot_description
       Scene Geometry:
-        Scene Alpha: 0.8999999761581421
+        Scene Alpha: 1
         Scene Color: 50; 230; 50
         Scene Display Time: 0.009999999776482582
         Show Scene Geometry: true
@@ -220,10 +264,6 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-          camera_link:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
           dovetail_female_mount__base:
             Alpha: 1
             Show Axes: false
@@ -233,6 +273,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          dovetail_female_mount__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           dovetail_male_mount__base:
             Alpha: 1
             Show Axes: false
@@ -242,6 +286,10 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
+          dovetail_male_mount__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           flange:
             Alpha: 1
             Show Axes: false
@@ -255,11 +303,55 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-          gripper_link:
+          mock_pruner__base:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
+          mock_pruner__camera0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__endpoint:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__mouth:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__mouth_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          mock_pruner__tof0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__tof1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          mock_pruner__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          rotation_correction_plate__base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          rotation_correction_plate__body:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          rotation_correction_plate__tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
           shoulder_link:
             Alpha: 1
             Show Axes: false
@@ -293,37 +385,20 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Robot Alpha: 1
+        Robot Alpha: 0.5
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
       Velocity_Scaling_Factor: 0.1
-    - Class: rviz_default_plugins/MarkerArray
+    - Class: rviz_default_plugins/InteractiveMarkers
+      Enable Transparency: true
       Enabled: true
-      Name: MarkerArray
-      Namespaces:
-        {}
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /ftl_move_group_server
+      Interactive Markers Namespace: ""
+      Name: InteractiveMarkers
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
       Value: true
-    - Class: rviz_default_plugins/Image
-      Enabled: false
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: Image
-      Normalize Range: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /camera/color/image_raw
-      Value: false
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -334,7 +409,7 @@ Visualization Manager:
       Channel Name: intensity
       Class: rviz_default_plugins/PointCloud2
       Color: 255; 255; 255
-      Color Transformer: RGB8
+      Color Transformer: Intensity
       Decay Time: 0
       Enabled: true
       Invert Rainbow: false
@@ -354,46 +429,31 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /camera/camera/depth/color/points
+        Value: /point_cloud
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
-    - Class: rviz_default_plugins/TF
-      Enabled: false
-      Frame Timeout: 15
-      Frames:
-        All Enabled: false
-      Marker Scale: 1
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: false
-      Tree:
-        {}
-      Update Interval: 0
-      Value: false
     - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 255; 25; 0
+      Angular Arrow Scale: 2
+      Angular Color: 204; 204; 51
+      Arrow Width: 0.5
+      Class: rviz_default_plugins/TwistStamped
       Enabled: true
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
+      Hide Small Values: true
+      History Length: 1
+      Linear Arrow Scale: 2
+      Linear Color: 204; 51; 51
+      Name: TwistStamped
       Topic:
         Depth: 5
         Durability Policy: Volatile
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /goal_pose
+        Value: /servo_node/delta_twist_cmds
       Value: true
     - Class: rviz_default_plugins/Image
-      Enabled: true
+      Enabled: false
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -405,9 +465,9 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /camera/camera/color/image_raw
-      Value: true
+      Value: false
     - Class: rviz_default_plugins/Image
-      Enabled: true
+      Enabled: false
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -419,6 +479,163 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /point_mask_image
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        goal: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /visualization_marker
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base:
+          Value: false
+        base_link:
+          Value: false
+        base_link_inertia:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: true
+        camera_link:
+          Value: false
+        dovetail_female_mount__base:
+          Value: false
+        dovetail_female_mount__body:
+          Value: false
+        dovetail_female_mount__tool0:
+          Value: false
+        dovetail_male_mount__base:
+          Value: false
+        dovetail_male_mount__body:
+          Value: false
+        dovetail_male_mount__tool0:
+          Value: false
+        flange:
+          Value: false
+        forearm_link:
+          Value: false
+        ft_frame:
+          Value: false
+        mock_pruner__base:
+          Value: false
+        mock_pruner__camera0:
+          Value: false
+        mock_pruner__endpoint:
+          Value: false
+        mock_pruner__mouth:
+          Value: false
+        mock_pruner__mouth_base:
+          Value: false
+        mock_pruner__tof0:
+          Value: false
+        mock_pruner__tof1:
+          Value: false
+        mock_pruner__tool0:
+          Value: false
+        rotation_correction_plate__base:
+          Value: false
+        rotation_correction_plate__body:
+          Value: false
+        rotation_correction_plate__tool0:
+          Value: false
+        shoulder_link:
+          Value: false
+        tool0:
+          Value: false
+        upper_arm_link:
+          Value: false
+        world:
+          Value: false
+        wrist_1_link:
+          Value: false
+        wrist_2_link:
+          Value: false
+        wrist_3_link:
+          Value: false
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world:
+          base_link:
+            base:
+              {}
+            base_link_inertia:
+              shoulder_link:
+                upper_arm_link:
+                  forearm_link:
+                    wrist_1_link:
+                      wrist_2_link:
+                        wrist_3_link:
+                          flange:
+                            tool0:
+                              rotation_correction_plate__base:
+                                rotation_correction_plate__body:
+                                  rotation_correction_plate__tool0:
+                                    dovetail_male_mount__base:
+                                      dovetail_male_mount__body:
+                                        dovetail_male_mount__tool0:
+                                          dovetail_female_mount__base:
+                                            dovetail_female_mount__body:
+                                              dovetail_female_mount__tool0:
+                                                mock_pruner__base:
+                                                  mock_pruner__camera0:
+                                                    camera_link:
+                                                      camera_color_frame:
+                                                        camera_color_optical_frame:
+                                                          {}
+                                                  mock_pruner__endpoint:
+                                                    {}
+                                                  mock_pruner__mouth_base:
+                                                    mock_pruner__mouth:
+                                                      {}
+                                                  mock_pruner__tof0:
+                                                    {}
+                                                  mock_pruner__tof1:
+                                                    {}
+                                                  mock_pruner__tool0:
+                                                    {}
+                          ft_frame:
+                            {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: false
+      Name: Marker
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_info
+      Value: false
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_info_array
       Value: true
     - Class: rviz_default_plugins/MarkerArray
       Enabled: true
@@ -430,7 +647,19 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /visualization_marker
+        Value: /robot_info_array
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Namespaces:
+        text_marker: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_info
       Value: true
   Enabled: true
   Global Options:
@@ -443,34 +672,6 @@ Visualization Manager:
       Hide Inactive Objects: true
     - Class: rviz_default_plugins/MoveCamera
     - Class: rviz_default_plugins/Select
-    - Class: rviz_default_plugins/FocusCamera
-    - Class: rviz_default_plugins/Measure
-      Line color: 128; 128; 0
-    - Class: rviz_default_plugins/SetInitialPose
-      Covariance x: 0.25
-      Covariance y: 0.25
-      Covariance yaw: 0.06853891909122467
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /initialpose
-    - Class: rviz_default_plugins/SetGoal
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /goal_pose
-    - Class: rviz_default_plugins/PublishPoint
-      Single click: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /clicked_point
   Transformation:
     Current:
       Class: rviz_default_plugins/TF
@@ -478,45 +679,43 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.218185544013977
+      Distance: 5.5536394119262695
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.2489434778690338
-        Y: -0.013962505385279655
-        Z: 0.13800443708896637
+        X: -0.10000000149011612
+        Y: 0.25
+        Z: 0.30000001192092896
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8203974962234497
-      Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 4.333615303039551
+      Pitch: 0.3599987030029297
+      Target Frame: world
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 0.378816694021225
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
   Height: 1016
+  Help:
+    collapsed: false
   Hide Left Dock: false
-  Hide Right Dock: true
+  Hide Right Dock: false
   Image:
     collapsed: false
   MotionPlanning:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001f90000039efc020000000efb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000000d6000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001190000017d0000017d00fffffffb0000000a0049006d0061006700650000000311000000ca0000002800fffffffb0000000a0049006d006100670065010000029c000000890000002800fffffffb0000000a0049006d006100670065010000032b000000b00000002800ffffff000000010000011000000416fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d00000416000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d006501000000000000045000000000000000000000053b0000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
-  Selection:
-    collapsed: false
-  Tool Properties:
-    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000100000000000002f00000039efc0200000007fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb000000100044006900730070006c006100790073010000003d0000039e000000c900fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001270000017d0000017d00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a00560069006500770073000000031d000000be000000a400fffffffb0000000a0049006d00610067006500000001ce000000d90000002800fffffffb0000000a0049006d00610067006500000002ad0000012e0000002800ffffff000004440000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
-    collapsed: true
+    collapsed: false
   Width: 1850
   X: 70
   Y: 27
