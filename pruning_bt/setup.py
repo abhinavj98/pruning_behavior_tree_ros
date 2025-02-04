@@ -17,8 +17,16 @@ setup(
         (os.path.join("share", package_name, "srdf"), glob("srdf/*")),
         (os.path.join("share", package_name, "meshes/old"), glob("meshes/old/*")),
 
-        (os.path.join("share", package_name, "meshes/"), glob("meshes/*")),
+        (os.path.join("share", package_name, "meshes/"), glob("meshes/*.stl")),
 
+
+        (os.path.join("share", package_name, "meshes/end_effectors/dovetail"), glob("meshes/end_effectors/dovetail/*")),
+
+        (os.path.join("share", package_name, "meshes/end_effectors/mock_pruner"), glob("meshes/end_effectors/mock_pruner/*")),
+
+        (os.path.join("share", package_name, "meshes/end_effectors/rotation_correction_plate"), glob("meshes/end_effectors/rotation_correction_plate/*")),
+
+        (os.path.join("share", package_name, "meshes/base_mounts/farm-ng/amiga"), glob("meshes/base_mounts/farm-ng/amiga/*")),
     ],
     install_requires=['setuptools'],
     zip_safe=True,

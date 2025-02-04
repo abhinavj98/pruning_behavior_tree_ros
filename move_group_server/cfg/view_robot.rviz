@@ -11,7 +11,7 @@ Panels:
         - /MarkerArray2
         - /MarkerArray2/Topic1
       Splitter Ratio: 0.5
-    Tree Height: 795
+    Tree Height: 427
   - Class: rviz_common/Help
     Name: Help
   - Class: rviz_common/Views
@@ -453,7 +453,7 @@ Visualization Manager:
         Value: /servo_node/delta_twist_cmds
       Value: true
     - Class: rviz_default_plugins/Image
-      Enabled: false
+      Enabled: true
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -465,9 +465,9 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /camera/camera/color/image_raw
-      Value: false
+      Value: true
     - Class: rviz_default_plugins/Image
-      Enabled: false
+      Enabled: true
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -479,12 +479,12 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /point_mask_image
-      Value: false
+      Value: true
     - Class: rviz_default_plugins/MarkerArray
       Enabled: true
       Name: MarkerArray
       Namespaces:
-        goal: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -653,7 +653,7 @@ Visualization Manager:
       Enabled: true
       Name: MarkerArray
       Namespaces:
-        text_marker: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -713,7 +713,7 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002f00000039efc0200000007fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb000000100044006900730070006c006100790073010000003d0000039e000000c900fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001270000017d0000017d00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a00560069006500770073000000031d000000be000000a400fffffffb0000000a0049006d00610067006500000001ce000000d90000002800fffffffb0000000a0049006d00610067006500000002ad0000012e0000002800ffffff000004440000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002f00000039efc0200000007fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb000000100044006900730070006c006100790073010000003d0000022e000000c900fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001270000017d0000017d00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a00560069006500770073000000031d000000be000000a400fffffffb0000000a0049006d0061006700650100000271000000ae0000002800fffffffb0000000a0049006d0061006700650100000325000000b60000002800ffffff000004440000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
   Width: 1850

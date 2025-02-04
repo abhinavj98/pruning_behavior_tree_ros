@@ -57,11 +57,61 @@
    <!-- create link fixed to the "world" -->
    <link name="world" />
 
+   <link name="amiga__base" />
+    <link name="amiga__body">
+      <visual>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0" />
+        <geometry>
+          <mesh filename="package://pruning_bt/meshes/base_mounts/farm-ng/amiga/frame_on_amiga_v2_simplified.stl" />
+        </geometry>
+        <material name="LightLightGrey" />
+      </visual>
+      <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.499053035" />
+        <geometry>
+          <box size="1.132 0.8 0.99810607" />
+        </geometry>
+      </collision>
+      <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.12 0.99810607" />
+        <geometry>
+          <box size="1.132 0.6 0.2" />
+        </geometry>
+      </collision>
+      <collision>
+        <origin rpy="0.0 0.0 0.0" xyz="0.44099999999999995 0.08333333333333333 1.19810607" />
+        <geometry>
+          <box size="0.25 0.25 0.25" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+        <mass value="40.0" />
+        <inertia ixx="5.454052423236149" ixy="0.0" ixz="0.0" iyy="7.592132423236148" iyz="0.0" izz="6.404746666666665" />
+      </inertial>
+    </link>
+    <link name="amiga__tool0" />
+    <joint name="world--amiga__base" type="fixed">
+      <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+      <parent link="world" />
+      <child link="amiga__base" />
+    </joint>
+    <joint name="amiga__base--amiga__body" type="fixed">
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <parent link="amiga__base" />
+      <child link="amiga__body" />
+    </joint>
+    <joint name="amiga__body--amiga__tool0" type="fixed">
+      <origin rpy="0.0 0.0 -3.9269908169872414" xyz="-0.225 0.323256 0.99810607" />
+      <parent link="amiga__body" />
+      <child link="amiga__tool0" />
+    </joint>
+
    <!-- arm -->
    <xacro:ur_robot
      name="$(arg name)"
      tf_prefix="$(arg tf_prefix)"
-     parent="world"
+     parent="amiga__tool0"
      joint_limits_parameters_file="$(arg joint_limit_params)"
      kinematics_parameters_file="$(arg kinematics_params)"
      physical_parameters_file="$(arg physical_params)"
@@ -97,7 +147,12 @@
      >
      <origin xyz="0 0 0" rpy="0 0 0" />          <!-- position robot in the world -->
    </xacro:ur_robot>
-
+<!-- 
+  <joint name="base_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0" />
+    <parent link="amiga__tool0" />
+    <child link="base_link" />
+  </joint> -->
    <xacro:if value="$(arg sim_gazebo)">
     <!-- Gazebo plugins -->
     <gazebo reference="world">
@@ -120,21 +175,19 @@
       </plugin>
     </gazebo>
   </xacro:if>
-
-
 <link name="rotation_correction_plate__base" />
   <link name="rotation_correction_plate__body">
     <visual>
       <material name="grass_green" />
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/RotationCorrectionPlate.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/rotation_correction_plate/RotationCorrectionPlate.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/RotationCorrectionPlate.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/rotation_correction_plate/RotationCorrectionPlate.STL" />
       </geometry>
     </collision>
     <inertial>
@@ -148,7 +201,7 @@
     <origin rpy="0.0 0.0 0.0" xyz="0 0 0" />
     <parent link="tool0" />
     <child link="rotation_correction_plate__base" />
-  </joint>  
+  </joint>
   <joint name="rotation_correction_plate__base--body" type="fixed">
     <origin rpy="0 0 0" xyz="0 0 0" />
     <parent link="rotation_correction_plate__base" />
@@ -168,13 +221,13 @@
       <material name="lavender" />
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/DovetailMale.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/dovetail/DovetailMale.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/DovetailMale.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/dovetail/DovetailMale.STL" />
       </geometry>
     </collision>
     <inertial>
@@ -208,13 +261,13 @@
       <material name="ochre" />
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/DovetailFemale.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/dovetail/DovetailFemale.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/DovetailFemale.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/dovetail/DovetailFemale.STL" />
       </geometry>
     </collision>
     <inertial>
@@ -246,13 +299,13 @@
       </material>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/MockPrunerNoToF.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/mock_pruner/MockPrunerNoToF.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="package://pruning_bt/meshes/MockPrunerNoToF.STL" />
+        <mesh filename="package://pruning_bt/meshes/end_effectors/mock_pruner/MockPrunerNoToF.STL" />
       </geometry>
     </collision>
     <inertial>
@@ -265,6 +318,7 @@
   <link name="mock_pruner__tof0" />
   <link name="mock_pruner__tof1" />
   <link name="mock_pruner__tool0" />
+  
 
   <!--  Phantom links and joints for RL rewards-->
   <link name="mock_pruner__endpoint">
