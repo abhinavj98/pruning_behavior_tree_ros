@@ -80,6 +80,12 @@ def generate_launch_description():
         actions=[move_group_server_launch], # We delay the launch of move_group_server to ensure that moveit is ready
     )
 
+    # tof_launch = IncludeLaunchDescription(
+    #     AnyLaunchDescriptionSource(
+    #         os.path.join(get_package_share_directory("micro_ros_agent"), "launch", "micro_ros_agent.launch.py")
+    #     )
+    # )
+
     #Simulation for RL policy has the robot rotated
     # tf_node_world_sim = Node(
     #     package="tf2_ros",
@@ -136,6 +142,21 @@ def generate_launch_description():
         executable="rviz_point_selection",
     )
 
+    tof_node  = Node(
+        package="micro_ros_agent",
+        executable="micro_ros_agent",
+        name="micro_ros_agent",
+        output="screen",
+        arguments=["serial", "--dev", "/dev/ttyACM0", "ROS_DOMAIN_ID=0"],
+        # condition=UnlessCondition(use_mock_hardware),
+    )
+
+    log_endpoint_pose_service = Node(
+        package="pruning_bt",
+        executable="log_endpoint_pose_service",
+        name = "log_endpoint_pose_service"
+    )
+
     return LaunchDescription(
         [
             ur_type_arg,
@@ -154,7 +175,9 @@ def generate_launch_description():
             # tf_node_gripper_endpoint,
             # tf_node_mount,
             tf_node_mount_to_cam,
-            pub_pcl_node,
-            rviz_point_selection_node
+            # pub_pcl_node,
+            rviz_point_selection_node,
+            tof_node,
+            log_endpoint_pose_service
         ]
     )

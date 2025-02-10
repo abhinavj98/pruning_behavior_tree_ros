@@ -48,6 +48,8 @@ setup(
             'set_goal_as_endpoint_service = pruning_bt.nodes.set_goal_as_endpoint_service:main',
             'pub_pcl = pruning_bt.nodes.pub_pcl:main',
             'rviz_point_selection = pruning_bt.nodes.rviz_point_selection:main',
+            'log_endpoint_pose_service = pruning_bt.nodes.log_endpoint_pose_service:main',
+            'save_trial_info = pruning_bt.nodes.save_trial_info:main'
         ],
     },
 )

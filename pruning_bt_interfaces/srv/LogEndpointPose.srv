@@ -1,0 +1,10 @@
+# Request
+string tree_type     # Type of tree or experiment (e.g., "ufo")
+int32 tree_number
+int32 trial_number  # Trial number (e.g., "1")
+string type  # Either "d" or "a"
+
+---
+# Response
+bool success  # Indicates if the logging was successful
+string message  # A message about the result of logging the pose
